@@ -1,0 +1,21 @@
+FROM ubuntu
+
+RUN apt-get update
+RUN apt-get install -y nginx
+ENTRYPOINT ["/usr/sbin/nginx"]
+
+RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
+RUN chown -R www-data:www-data /var/lib/nginx
+
+VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/var/log/nginx"]
+
+EXPOSE 80
+
+ADD config/nginx.conf /etc/nginx/conf.d/default.conf
+
+WORKDIR /etc/nginx
+
+CMD ["nginx"]
+
+
+

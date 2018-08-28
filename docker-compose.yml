@@ -4,8 +4,8 @@ services:
     image: nginx:1.14.0
     volumes: 
       - ./docker/config/:/etc/nginx/
-     restart: always
-     ports:
+    restart: always
+    ports:
       - "8080:80"
      
   python:

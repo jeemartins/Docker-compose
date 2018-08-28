@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-    image: nginx:1.14.0
+    image: nginx
     volumes: 
       - ./docker/config/:/etc/nginx/
      restart: always

@@ -1,11 +1,13 @@
 version: '3'
-
-services:
-    nginx:1.14.0
-      container_name: nginx
-      restart: always
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
-    ports:
-      - "8080:80"
+ services:
+  nginx:
+    image: nginx:1.14.0
+    volumes: 
+      - ./docker/config/:/etc/nginx/
+     restart: always
+     ports:
+     - "8000:80"
+     
+  python:
+    image: python:3.4
+    restart: always

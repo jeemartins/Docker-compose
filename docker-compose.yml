@@ -6,7 +6,7 @@ services:
       - ./docker/config/:/etc/nginx/
     restart: always
     ports:
-      - "8080:80"
+      - "80"
      
   python:
     image: python:3.4

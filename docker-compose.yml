@@ -1,15 +1,11 @@
 version: '3'
 
 services:
-    nginx:
+    nginx:1.14.0
       container_name: nginx
       restart: always
     build:
       context: ./nginx
       dockerfile: Dockerfile
-    volumes:
-      - ${APPLICATION}:/var/www/html
-      - ${NGINX_HOST_LOG_PATH}:/var/log/nginx
-      - ${NGINX_SITES_PATH}:/etc/nginx/conf.d
     ports:
       - "8080:80"

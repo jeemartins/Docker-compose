@@ -9,7 +9,7 @@ RUN chown -R www-data:www-data /var/lib/nginx
 
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/var/log/nginx"]
 
-EXPOSE 80
+EXPOSE 8080:80
 
 ADD config/nginx.conf /etc/nginx/conf.d/default.conf
 

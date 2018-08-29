@@ -1,5 +1,15 @@
 version: '3'
-services:   
+services: 
+  ubuntu:
+    image: ubuntu:14.10
+    restart: always
+  nginx:
+    image: nginx:1.14.0
+    restart: always
+    ports:
+      - "80"
+    volumes:
+      - ./docker/config/:/etc/nginx/
   python:
     image: python:3.4
     restart: always

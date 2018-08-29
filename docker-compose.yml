@@ -9,5 +9,7 @@ services:
     ports:
       - "8080:80"
   python:
+    depends_on:
+      - nginx
     image: python:3.4.7
     restart: always

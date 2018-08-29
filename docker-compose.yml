@@ -9,5 +9,5 @@ services:
     ports:
       - "80"
   python:
-    image: python:3.4
+    image: python:3.4.7
     restart: always

@@ -8,8 +8,6 @@ services:
     restart: always
     ports:
       - "80"
-    volumes:
-      - ./docker/config/:/etc/nginx/
   python:
     image: python:3.4
     restart: always

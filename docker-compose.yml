@@ -1,11 +1,6 @@
 version: '3'
 services: 
-  ubuntu:
-    image: ubuntu:14.10
-    restart: always
   nginx:
-    depends_on: 
-      - ubuntu
     image: nginx:1.14.0
     restart: always
     ports:

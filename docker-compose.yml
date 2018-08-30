@@ -1,20 +1,13 @@
-version: '3'  
-services: 
-  ubuntu:
-    image: ubuntu:14.10
-    restart: always
+version: '3'
+services:
   nginx:
     image: nginx:1.14.0
+    volumes: 
+      - ./docker/config/:/etc/nginx/
     restart: always
     ports:
-      - "8080:80"
-    volumes:
-      - ./docker/config/:/etc/nginx/
-  web:
-    build: .
-    ports:
-      - "5000:5000"
-    environment:
-      - FLASK_APP=app.py  
+      - "8080:80" 
+  python:
+    image: python:3.4
     restart: always
 

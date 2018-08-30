@@ -13,3 +13,4 @@ services:
       - nginx
     image: python:3.4.7
     restart: always
+    dockerfile: Dockerfile

@@ -7,7 +7,7 @@ services:
     environment:
       - FLASK_APP=app.py
   nginx:
-    image: nginx:1.14.0
+    image: nginx
     restart: always
     volumes:
       - "./default.conf:/etc/nginx/conf.d/default.conf"

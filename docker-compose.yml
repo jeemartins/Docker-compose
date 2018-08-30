@@ -6,7 +6,7 @@ version: '3'
    nginx:
      image: nginx:1.14.0
      restart: always
-    ports:
+     ports:
       - "8080:80"
   python:
     depends_on:

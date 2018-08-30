@@ -1,2 +1,2 @@
 # Docker
-Teste docker-compose
+Lab de estudo docker-compose.

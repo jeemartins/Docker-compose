@@ -9,9 +9,11 @@ services:
      ports:
        - "8080:80"
        - "5000:5000"
-  python:
+  web:
      depends_on:
        - nginx
-     image: python:3.4.7
+     build: .
+     ports:
+        -"5000:5000"
      restart: always
 

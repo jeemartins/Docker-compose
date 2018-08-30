@@ -1,16 +1,16 @@
- version: '3'
- services: 
-   ubuntu:
+version: '3'
+services: 
+  ubuntu:
      image: ubuntu:14.10
      restart: always
-   nginx:
+  nginx:
      image: nginx:1.14.0
      restart: always
-    ports:
-      - "8080:80"
+     ports:
+       - "8080:80"
   python:
-    depends_on:
-      - nginx
-    image: python:3.4.7
-    restart: always
+     depends_on:
+       - nginx
+     image: python:3.4.7
+     restart: always
 

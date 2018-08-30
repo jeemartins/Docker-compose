@@ -1,13 +1,13 @@
  version: '3'
  services:
-   nginx:
-     image: nginx:1.14.0
-     volumes: 
-      - ./docker/config/:/etc/nginx/
-    restart: always
-    ports:
-      - "8080:80"
-  python:
-    image: python:3.4
-     restart: always
+    nginx:
+      image: nginx:1.14.0
+      volumes: 
+        - ./docker/config/:/etc/nginx/
+      restart: always
+      ports:
+        - "8080:80"
+    python:
+      image: python:3.4
+      restart: always
 

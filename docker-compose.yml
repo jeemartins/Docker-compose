@@ -4,6 +4,8 @@ services:
     image: ubuntu:14.10
     restart: always
   nginx:
+    depends_on: 
+      - ubuntu
     image: nginx:1.14.0
     restart: always
     ports:
@@ -13,4 +15,4 @@ services:
       - nginx
     image: python:3.4.7
     restart: always
-    dockerfile: Dockerfile
+    

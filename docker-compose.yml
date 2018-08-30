@@ -1,13 +1,14 @@
 version: '3'
 services: 
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=app.py
   nginx:
     image: nginx:1.14.0
     restart: always
-    ports:
-      - "8080:80"
-  python:
-    depends_on:
-      - nginx
-    image: python:3.4.7
-    restart: always
+    volumes:
+      - "./default.conf:/etc/nginx/conf.d/default.conf"
     

@@ -3,17 +3,13 @@ services:
   ubuntu:
     image: ubuntu:14.10
     restart: always
-  reverseproxy:
-    image: reverseproxy
-    ports:
-      - 8080:8080
-      - 5000:5000
-    restart: always
   nginx:
     depends_on: 
-      - reverseproxy
+      - ubuntu
     image: nginx:1.14.0
     restart: always
+    ports:
+      - "8080:80"
   python:
     depends_on:
       - nginx
